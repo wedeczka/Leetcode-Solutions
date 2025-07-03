@@ -8,9 +8,7 @@
 *.jar
 
 # Python
-__pycache__/
-*.py[cod]
-*.pyo
+
 
 # VSCode project settings
 .vscode/
