@@ -9,6 +9,7 @@ class TwoSum {
         System.out.println(Arrays.toString(twoSum(nums, 6)));
         System.out.println(Arrays.toString(twoSumv1(nums, 6)));
         System.out.println(Arrays.toString(twoSumv2(nums, 6)));
+        System.out.println(Arrays.toString(twoSumv2Upgraded(nums,6)));
     }
 
     public static int[] twoSum(int[] nums, int target) {
@@ -60,5 +61,16 @@ class TwoSum {
         return null;
     }
 
+    public static int[] twoSumv2Upgraded(int[] nums, int target) {
+        //the same solution as the twoSumv2 but with less memory used
+        HashMap<Integer, Integer> numbers = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {            
+            int help = target - nums[i];
+            if (numbers.containsKey(help)) {
+                return new int[]{numbers.get(help), i};
+            }
+            numbers.put(nums[i], i);
+        }
+        return null;
+    }
 }
-
