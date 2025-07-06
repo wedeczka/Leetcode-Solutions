@@ -56,7 +56,30 @@ bool isPalindrome(int x)
     return true;
 }
 
+bool isPalindromeV1(int x) {
+        // Negative numbers aren't palindroms e.g 123 != -123
+        //all numbers that last digit is 0 cannot be palindroms e.g 1111110
+        if (x < 0 || (x % 10 == 0 && x != 0)) {
+            return false;
+        }
+        int reversed = 0;
+        //we do the loop till the original number is highers than reversed number 
+        //(if there is even number of digits we will check all, if odd we will check everything beside the middle one)
+        while (x > reversed) {
+            //this is the proces of making the reverse number e.g
+            //x = 1234554321
+            //reverse = 0 * 10 + 1 = 1
+            //next step x = 123455432
+            //reverse = 1 * 10 + 2 =12
+            //next step x = 12345543
+            //reverse = 12 * 10 + 3 = 123 and we can clearly see that we "rotate" the number 
+            reversed = reversed * 10 + x % 10;
+            x /= 10;
+        }
+        return x == reversed || x == reversed / 10; //the second half is when there is a odd number of digits co we want to cut the middle one 
+    }
 int main()
 {
-    cout << isPalindrome(2);
+    cout << isPalindrome(10)<<endl;
+    cout << isPalindromeV1(10);
 }
