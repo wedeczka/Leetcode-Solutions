@@ -6,4 +6,5 @@
 | 9    | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) |  [C++](C++/Easy/PalindromeNumber.cpp), [Java](Java/Easy/PalindromeNumber_09.java) | Easy       |
 | 13    | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) |[Java](Java/Easy/PalindromeNumber_09.java) | Easy       |
 | 14    | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) |[Java](Java/Easy/LongestCommonPrefix_014.java) | Easy       |
+| 20    | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) |[Java](Java/Easy/ValidParentheses_020.java) | Easy       |
 
